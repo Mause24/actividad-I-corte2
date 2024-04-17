@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Basic Form</title>
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="static/basicForm/styles.css" />
+    </head>
+    <body>
+        <main>
+            <h1 class="formContainer__title">
+                Formulario agregar nuevo registro
+            </h1>
+            <form name="formLibrary" class="main__formContainer" method="post">
+                <!-- ID FIELD -->
+                <div class="formContainer__field" for="name">
+                    <label class="field__name" for="name">ID</label>
+                    <input
+                        placeholder="Ingresa tu id"
+                        required
+                        class="field__input"
+                        type="number"
+                        name="id"
+                        id="id"
+                        aria-errormessage="fieldError"
+                        onblur="validateField(this.id);" />
+                    <span id="fieldError" class="field__error">
+                        El campo id no puede estar vacio
+                    </span>
+                </div>
+                <!-- NAME FIELD -->
+                <div class="formContainer__field" for="name">
+                    <label class="field__name" for="name">Nombre</label>
+                    <input
+                        placeholder="Ingresa tu nombre"
+                        required
+                        class="field__input"
+                        type="text"
+                        name="name"
+                        id="name"
+                        aria-errormessage="fieldError"
+                        onblur="validateField(this.id);" />
+                    <span id="fieldError" class="field__error">
+                        El campo nombre no puede estar vacio
+                    </span>
+                </div>
+                <!-- LASTNAME FIELD -->
+                <div class="formContainer__field" for="name">
+                    <label class="field__name" for="name">Apellido</label>
+                    <input
+                        placeholder="Ingresa tu apellido"
+                        required
+                        class="field__input"
+                        type="text"
+                        name="lastname"
+                        id="lastname"
+                        aria-errormessage="fieldError"
+                        onblur="validateField(this.id);" />
+                    <span id="fieldError" class="field__error">
+                        El campo apellido no puede estar vacio
+                    </span>
+                </div>
+                <!-- BOOK -->
+                <!-- TITLE FIELD -->
+                <div class="formContainer__field" for="name">
+                    <label class="field__name" for="name"
+                        >Titulo del libro</label
+                    >
+                    <input
+                        placeholder="Ingresa el titulo del libro"
+                        required
+                        class="field__input"
+                        type="text"
+                        name="title"
+                        id="title"
+                        aria-errormessage="fieldError"
+                        onblur="validateField(this.id);" />
+                    <span id="fieldError" class="field__error">
+                        El campo titulo no puede estar vacio
+                    </span>
+                </div>
+                <!-- AUTHOR FIELD -->
+                <div class="formContainer__field" for="name">
+                    <label class="field__name" for="name">Autor</label>
+                    <input
+                        placeholder="Ingresa el autor del libro"
+                        required
+                        class="field__input"
+                        type="text"
+                        name="author"
+                        id="author"
+                        aria-errormessage="fieldError"
+                        onblur="validateField(this.id);" />
+                    <span id="fieldError" class="field__error">
+                        El campo autor no puede estar vacio
+                    </span>
+                </div>
+                <!-- PUBLISHER FIELD -->
+                <div class="formContainer__field" for="name">
+                    <label class="field__name" for="name">Editorial</label>
+                    <input
+                        placeholder="Ingresa la auditorial del libro"
+                        required
+                        class="field__input"
+                        type="text"
+                        name="publisher"
+                        id="publisher"
+                        aria-errormessage="fieldError"
+                        onblur="validateField(this.id);" />
+                    <span id="fieldError" class="field__error">
+                        El campo editorial no puede estar vacio
+                    </span>
+                </div>
+                <!-- YEAR FIELD -->
+                <div class="formContainer__field" for="name">
+                    <label class="field__name" for="name"
+                        >Año de publicacion</label
+                    >
+                    <input
+                        placeholder="Ingresa el año de publicacion del libro"
+                        required
+                        class="field__input"
+                        type="number"
+                        min="0"
+                        name="year"
+                        id="year"
+                        aria-errormessage="fieldError"
+                        onblur="validateField(this.id);" />
+                    <span id="fieldError" class="field__error">
+                        El campo año de publicacion no puede estar vacio
+                    </span>
+                </div>
+                <!-- SUBMIT BUTTON -->
+                <input
+                    value="Enviar"
+                    class="formContainer__button"
+                    type="submit" />
+            </form>
+        </main>
+    </body>
+    <script src="static/basicForm/script.js"></script>
+</html>

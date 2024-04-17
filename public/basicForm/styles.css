@@ -1,0 +1,135 @@
+/* ROOT */
+
+:root {
+    /* COLORS */
+    --primary-color: royalblue;
+    --gray-color: rgb(219, 219, 219);
+    --light-color: white;
+    --dark-color: black;
+    --text-color: rgb(24, 24, 24);
+    --text-light-color: rgb(240, 240, 240);
+    --warning-color: rgb(189, 29, 29);
+    /* FONTS */
+    --primary-font: "Courier New", Courier, monospace;
+}
+
+/* INITIAL CONFIG */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100dvh;
+}
+
+/* MAIN */
+
+main {
+    width: 100%;
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+main > .formContainer__title {
+    font-family: var(--primary-font);
+    color: var(--text-light-color);
+    font-weight: bold;
+}
+
+/* MAIN FORM CONTAINER */
+
+main > .main__formContainer {
+    padding: 40px 30px;
+    min-width: 350px;
+    width: 50%;
+    background-color: var(--light-color);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 15px;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* FIELD */
+.formContainer__field {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.formContainer__field > .field__name {
+    font-family: var(--primary-font);
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.formContainer__field > .field__input {
+    width: 100%;
+    background-color: var(--gray-color);
+    border: 0;
+    padding: 10px 0px 10px 8px;
+    border-radius: 40px;
+    font-family: var(--primary-font);
+    color: var(--text-color);
+    font-weight: 600;
+}
+.formContainer__field > .field__error {
+    display: none;
+    margin-left: 15px;
+    font-family: var(--primary-font);
+    color: var(--warning-color);
+    font-weight: bold;
+}
+
+.formContainer__field > .field__input[aria-invalid="true"] + .field__error {
+    display: initial;
+}
+
+.formContainer__field > .field__input:focus-visible {
+    outline-color: var(--primary-color);
+}
+
+/* NUMERICS FIELD CONDITION */
+
+.formContainer__field > .field__input[type="number"]::-webkit-outer-spin-button,
+.formContainer__field
+    > .field__input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* FOR FIREFOX  */
+
+.formContainer__field > .field__input[type="number"] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+/* BUTTON */
+
+.main__formContainer > .formContainer__button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;
+    border: 0;
+    font-weight: bold;
+    border-radius: 20px;
+    font-size: 1.8rem;
+    color: var(--text-light-color);
+    background-color: var(--primary-color);
+    font-family: var(--primary-font);
+    cursor: pointer;
+}
